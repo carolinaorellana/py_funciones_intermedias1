@@ -1,4 +1,3 @@
-
 #1 Actualizar valores en diccionarios y listas
 x = [ [5,2,3], [10,8,9] ] 
 estudiantes = [
@@ -32,7 +31,7 @@ print(z)
 print("///////////////////////////////////////////////////////////")
 #Iterar a través de una lista de diccionarios 
 # Crea una función iterateDictionary(some_list)para que, dada una lista de diccionarios, la función recorra cada diccionarios de la lista e imprima cada llave y el valor asociado. Por ejemplo, dada la siguiente lista:
-
+''''''
 estudiantes = [
         {'first_name':  'Michael', 'last_name' : 'Jordan'},
         {'first_name' : 'John', 'last_name' : 'Rosales'},
@@ -42,14 +41,12 @@ estudiantes = [
 
 """
 Opcion con cada llave-valor en sitinta linea
-
 def iterateDictionar(listaAlumnos):
     for alumno in listaAlumnos:
         for key, val in alumno.items():
             print(f"{key} - {val}")
 iterateDictionar(estudiantes)
 
-"""
 def iterateDictionar(listaAlumnos):
     for alumno in listaAlumnos:
         alumno1=[]
@@ -59,7 +56,15 @@ def iterateDictionar(listaAlumnos):
         print(f"{alumno1[0]}, {alumno1[1]}")
 
 iterateDictionar(estudiantes)
+"""
+# Versión de la clase: 
 
+def iterateDictionar(listaAlumnos):
+    for alumno in listaAlumnos:
+        valor = list(alumno.items())
+        print(valor[0][0], " - ", valor[0][1],", ", valor[1][0], " - ", valor [1][1] )
+
+iterateDictionar(estudiantes)
 
 print("///////////////////////////////////////////////////////////")
 # debería devolver: (está bien si cada par clave-valor termina en 2 líneas separadas;
